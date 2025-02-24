@@ -18,18 +18,6 @@ struct Context {
         {}
 };
 
-template<typename T>
-std::ostream& operator<<(std::ostream& o, const std::vector<T>& v) {
-    size_t n = 0;
-
-    for(typename std::vector<T>::const_iterator i = v.begin(); i != v.end(); ++i) {
-        o << " " << n << ":" << *i;
-        ++n;
-    }
-
-    return o;
-}
-
 void SetPage(Context& ctx, const int user_id, const int page_no) {
     const int reader_prev_page = ctx.reader[user_id];
 
