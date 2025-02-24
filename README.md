@@ -81,5 +81,6 @@ make
 Передайте на стандартный вход программе содержимое файла `test_1_in.txt` из каталога `tests`. Программа должна вывести результат, который совпадает с содержимым файла `test_1_out.txt`.
 
 ```
-./ebook < ../tests/test_1_in.txt
+./ebook < ../tests/test_1_in.txt | diff -qs - ../tests/test_1_out.txt
+Files - and ../tests/test_1_out.txt are identical
 ```
